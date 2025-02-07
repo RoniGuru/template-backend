@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 app.use(helmet());
 app.use(cors());
 app.use(express.json());
-
+app.get('/', (req, res) => res.json('api get'));
 // Routes
 app.use('/health', healthRouter);
 
